@@ -8,17 +8,17 @@ Element providing solution to no problem in particular.
 
 ##### Example
 
-    <th-google-map></th-google-map>
+    <lens-viz-g-map></lens-viz-g-map>
 
-@element th-google-map
+@element lens-viz-g-map
 @blurb Element providing solution to no problem in particular.
 @status alpha
-@homepage http://sepans.github.io/th-google-map
+@homepage http://sepans.github.io/lens-viz-g-map
 -->
-<polymer-element name="th-google-map" extends="th-animated" attributes="input latitude longitude zoom showCenterMarker mapType markers fitToMarkers zoomable useTheme">
+<polymer-element name="lens-viz-g-map" extends="th-animated" attributes="input latitude longitude zoom showCenterMarker mapType markers fitToMarkers zoomable useTheme">
 
   <template>
-    <link rel="stylesheet" href="th-google-map.css" />
+    <link rel="stylesheet" href="lens-viz-g-map.css" />
     <core-style ref="theme"></core-style>
     <style>
       :host {
@@ -52,7 +52,7 @@ Element providing solution to no problem in particular.
 
   <script>
 
-    Polymer('th-google-map', {
+    Polymer('lens-viz-g-map', {
 
     /**
      * A latitude to center the map on.
@@ -263,12 +263,12 @@ Element providing solution to no problem in particular.
         var self = this;
         self.markers = self.input;
         self.$.map.mapApiLoaded();
-        console.log('th-google-map input changed');
+        console.log('lens-viz-g-map input changed');
         self.fire('th-input-changed', self);
       },
       getMetaData: function() {
         return {
-            "name": "th-google-map",
+            "name": "lens-viz-g-map",
             "description": "Wrapper for Google Maps",
             "category":"map",
             "version": "0.0.1",
